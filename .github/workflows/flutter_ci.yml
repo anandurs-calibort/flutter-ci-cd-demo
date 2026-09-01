@@ -18,6 +18,10 @@
         - name: Checkout repository
           uses: actions/checkout@v4
 
-        - name: Print CI message
-          run: echo "CI pipeline is running successfully!"
+        - name: Setup Flutter
+          uses: subosito/flutter-action@v2
+          with:
+            channel: stable
 
+        - name: Check Flutter version
+          run: flutter --version
