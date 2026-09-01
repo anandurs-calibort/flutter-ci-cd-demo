@@ -1,0 +1,23 @@
+  name: Flutter CI
+
+  on:
+    push:
+      branches:
+        - main
+        - feature/ci-cd-pipeline
+
+    pull_request:
+      branches:
+        - main
+
+  jobs:
+    ci:
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v4
+
+        - name: Print CI message
+          run: echo "CI pipeline is running successfully!"
+
