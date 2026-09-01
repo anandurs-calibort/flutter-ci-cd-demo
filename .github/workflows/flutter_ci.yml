@@ -31,3 +31,6 @@
 
         - name: Analyze Flutter project
           run: flutter analyze
+
+        - name: Run Flutter tests
+          run: flutter test
